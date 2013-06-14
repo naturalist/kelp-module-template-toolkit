@@ -78,6 +78,4 @@ proper rendering, you may want to add C<ENCODING> to its configuration:
     };
 
 
-=back
-
 =cut
