@@ -2,7 +2,7 @@ package Kelp::Module::Template::Toolkit;
 use Kelp::Base 'Kelp::Module::Template';
 use Template;
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 attr ext => 'tt';
 
@@ -80,10 +80,22 @@ should also add this location to the config:
             }
         }
     };
-    
-You can now render a template stored in C<home.tt> and correctly encoded like 
+
+You can now render a template stored in C<home.tt> and correctly encoded like
 this:
 
-    $self->render('home'); # can drop extension if tt    
+    $self->render('home'); # can drop extension if tt
+
+=head1 AUTHOR
+
+Stefan Geneshky - minimal @ cpan . org
+
+=head1 CONTRIBUTORS
+
+Gurunandan Bhat - gbhat @ pobox . com
+
+=head1 LICENSE
+
+Perl
 
 =cut
