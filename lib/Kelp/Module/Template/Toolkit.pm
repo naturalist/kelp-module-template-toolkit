@@ -2,7 +2,7 @@ package Kelp::Module::Template::Toolkit;
 use Kelp::Base 'Kelp::Module::Template';
 use Template;
 
-our $VERSION = 0.02;
+our $VERSION = 0.301;
 
 attr ext => 'tt';
 
@@ -14,7 +14,8 @@ sub build_engine {
 sub render {
     my ( $self, $template, $vars, @rest ) = @_;
     my $output;
-    $self->engine->process( $template, $vars, \$output, @rest );
+    $self->engine->process( $template, $vars, \$output, @rest )
+      or die $self->engine->error();
     return $output;
 }
 
